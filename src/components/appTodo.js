@@ -16,9 +16,9 @@ export default class Todo extends React.Component {
 	}
 
 	//Expres como se comportará al remover un itemList
-	removeItem = str => {
+	removeItem = i=> {
 		this.setState(state => {
-			const list = this.state.list.filter((item, rmText) => str !== rmText);
+			const list = this.state.list.filter((item, j) => i!== j);
 			return {
 				list
 			};
